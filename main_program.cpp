@@ -14,9 +14,9 @@ struct node{
 
 //deklarasi fungsi
 bool isEmpty();
-void push (int Newdata);
-void pop ();
-void viewStack();
+void push (int Newdata);//push data (memasukkan data )
+void pop ();//pop data (menghapus data )
+void viewStack();//Melihat isi stack
 
 int main(){//program utama
 	int menu, nilai;
@@ -69,14 +69,14 @@ bool isEmpty (){
 	return (top==NULL);
 }
 
-void push (int Newdata){
+void push (int Newdata){//push data (menambah data)
 	node *Newnode = (node*) malloc (sizeof(node));
 	Newnode -> value =Newdata;
 	Newnode -> next =top;
 	top = Newnode; 	
 } 
 
-void pop (){
+void pop (){//pop data (mengahapus data)
 	node *deletenode;
 	if(isEmpty())	
 		cout<<" Stack kosong ";
@@ -88,7 +88,7 @@ void pop (){
 	}
 }
 
-void viewStack(){
+void viewStack(){//Melihat isi stack
 	node *bantu =top;
 	if(!isEmpty()){
 		do{
