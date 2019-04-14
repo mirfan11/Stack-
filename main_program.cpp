@@ -40,3 +40,15 @@ void pop (){
 	delete deletenode;		
 	}
 }
+
+void viewStack(){
+	node *bantu =top;
+	if(!isEmpty()){
+		do{
+			cout<<bantu ->value <<"\n";
+			bantu=bantu -> next;
+		}while (bantu !=NULL);
+	}
+	else
+		cout<<"Stack Kosong \n";
+}
