@@ -21,9 +21,22 @@ char lagi (char pilih);
 bool isEmpty (){
 	return (top==NULL);
 }
+
 void push (int Newdata){
 	node *Newnode = (node*) malloc (sizeof(node));
 	Newnode -> value =Newdata;
 	Newnode -> next =top;
 	top = Newnode; 	
 } 
+
+void pop (){
+	node *deletenode;
+	if(isEmpty())	
+		cout<<" Stack kosong ";
+	else{
+	deletenode =top;
+	cout<<"nilai : "<<deletenode -> value <<" , popped. \n";
+	top =top -> next;
+	delete deletenode;		
+	}
+}
