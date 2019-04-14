@@ -21,3 +21,9 @@ char lagi (char pilih);
 bool isEmpty (){
 	return (top==NULL);
 }
+void push (int Newdata){
+	node *Newnode = (node*) malloc (sizeof(node));
+	Newnode -> value =Newdata;
+	Newnode -> next =top;
+	top = Newnode; 	
+} 
