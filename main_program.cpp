@@ -12,12 +12,13 @@ struct node{
 	
 }*top =NULL;
 
+//deklarasi fungsi
 bool isEmpty();
 void push (int Newdata);
 void pop ();
 void viewStack();
 
-int main(){
+int main(){//program utama
 	int menu, nilai;
 	char pilih;
 	while (menu!=4){
@@ -32,29 +33,29 @@ int main(){
 		cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
 		switch(menu)
 		{
-			case 1: 
+			case 1: //push
 				do{
 					cout<<"Masukkan Nilai : ";
 					cin>>nilai;
-					push(nilai);
+					push(nilai); //memanggil fungsi push
 					cout<<"\ningin memasukkan nilai lagi (y/Y) : ";
 					cin>>pilih;
 				}while (pilih=='y'||pilih =='Y');
 				break ;
 			
-			case 2:
+			case 2://pop
 				do{
-					pop();
+					pop();//memanggil fungsi pop
 					cout<<"ingin di Pop lagi (y/Y) : ";
 					cin>>pilih;
 				}while (pilih=='y'||pilih =='Y');
 				break ;
 				
-			case 3 :
+			case 3 ://menampilkan isi stack
 				cout<<"Isi Stack :\n";
-				viewStack();
+				viewStack();//memanggil fungsi view Stack
 				break;
-			case 4:
+			case 4://keluar dari program
 				cout<<"\nTelah keluar dari Program. Terimakasih\n";
 				break;
 			default :
