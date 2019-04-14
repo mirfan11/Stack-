@@ -17,3 +17,7 @@ void push (int Newdata);
 void pop ();
 void viewStack();
 char lagi (char pilih);
+
+bool isEmpty (){
+	return (top==NULL);
+}
